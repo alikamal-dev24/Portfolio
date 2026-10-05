@@ -170,10 +170,26 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 }
 @media(max-width:420px){.pj{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}h1 .c,.fade,.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:998;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.pre{display:none;position:fixed;inset:0;z-index:2000;background:var(--bg);place-items:center;align-content:center;text-align:center}
+html.gsap-on .pre{display:grid}
+.pre-n{font:800 clamp(5rem,20vw,12rem) "Bricolage Grotesque";color:var(--a);line-height:1}
+.pre-t{font:700 1rem "Bricolage Grotesque";color:var(--mute);letter-spacing:.25em;text-transform:uppercase}
+.wipe{position:fixed;left:0;right:0;top:100%;height:100%;background:var(--a);z-index:3000;pointer-events:none}
+html.gsap-on .fade{animation:none;opacity:1;transform:none}
+html.gsap-on .rv{opacity:1;transform:none;transition:none}
+html.gsap-on h1 .c{animation:none;transform:none}
+.badge{position:absolute;z-index:3;padding:12px 18px;border-radius:16px;background:rgba(22,26,34,.78);border:1px solid var(--line);backdrop-filter:blur(10px);box-shadow:0 20px 40px -15px rgba(0,0,0,.6);line-height:1.2}
+.badge b{display:block;font:800 1.7rem "Bricolage Grotesque";color:var(--a)}
+.badge span{font-size:.78rem;color:var(--mute)}
+.badge.b1{left:-6%;bottom:30%}.badge.b2{right:-4%;top:-2%}
+.more{text-align:center;margin-top:44px}.more p{color:var(--mute);margin-top:14px;font-size:.92rem}
+@media(max-width:900px){.badge.b1{left:0}.badge.b2{right:0}}
 </style>
 </head>
 <body>
-<div id="bar"></div><div class="cur"></div><div class="ring"></div>
+<div id="bar"></div><div class="pre" id="pre" aria-hidden="true"><div><div class="pre-n" id="pn">0</div><div class="pre-t">Ali Kamal · Portfolio</div></div></div><div class="wipe"></div><div class="cur"></div><div class="ring"></div>
 
 <header id="hd"><div class="wrap nav">
   <a href="#home" class="logo">Ali<i>.</i>Kamal</a>
@@ -196,6 +212,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <div class="port tilt" aria-hidden="true">
     <div class="orb two"></div><div class="orb"></div>
     <div class="core">AK</div>
+    <div class="badge b1"><b>30+</b><span>Projects delivered</span></div><div class="badge b2"><b>4+</b><span>Years of experience</span></div>
     <span class="chip">HTML5</span><span class="chip">JavaScript</span><span class="chip">WordPress</span><span class="chip">Bricks</span><span class="chip">PHP</span>
   </div>
 </div><div class="scroll" aria-hidden="true"></div></section>
@@ -240,14 +257,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </div></section>
 
 <section id="work" style="background:var(--bg2)"><div class="wrap">
-  <div class="sh rv"><small>Selected work</small><h2>Recent client projects</h2></div>
-  <div class="pj">
-    <a class="pc tilt rv" href="https://gmklines.com" target="_blank" rel="noopener"><div class="art" style="--h:22"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>GMK</b></div><div class="pi"><div><h3>GMK Lines</h3><p>Transport services platform with optimized layout structures.</p><div class="tags"><span>Bricks Builder</span><span>Transport</span></div></div><span class="go">↗</span></div></a>
-    <a class="pc tilt rv" style="--d:.1s" href="https://sked.life" target="_blank" rel="noopener"><div class="art" style="--h:265"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>SKED</b></div><div class="pi"><div><h3>SKED</h3><p>Responsive static layouts with interactive UI elements.</p><div class="tags"><span>Divi Builder</span><span>Interactive UI</span></div></div><span class="go">↗</span></div></a>
-    <a class="pc tilt rv" style="--d:.2s" href="https://seretiafrica.com" target="_blank" rel="noopener"><div class="art" style="--h:150"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>SA</b></div><div class="pi"><div><h3>Sereti Africa</h3><p>Clean corporate website for a strategy consulting firm.</p><div class="tags"><span>Bricks Builder</span><span>Corporate</span></div></div><span class="go">↗</span></div></a>
-    <a class="pc tilt rv" href="https://strangerthingshub.com" target="_blank" rel="noopener"><div class="art" style="--h:350"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>ST</b></div><div class="pi"><div><h3>Stranger Things Hub</h3><p>High-traffic content and blogging platform.</p><div class="tags"><span>Bricks Builder</span><span>Blog</span></div></div><span class="go">↗</span></div></a>
-    <a class="pc tilt rv" style="--d:.1s" href="https://intheevent.com" target="_blank" rel="noopener"><div class="art" style="--h:195"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>ITE</b></div><div class="pi"><div><h3>In The Event</h3><p>Custom e-commerce structure and product listings.</p><div class="tags"><span>Oxygen Builder</span><span>E-commerce</span></div></div><span class="go">↗</span></div></a>
-  </div>
+  <div class="sh rv"><small>Selected work</small><h2>Featured client projects</h2></div>
+  <div class="pj" id="pj"></div>
+  <div class="more rv"><a class="btn p mag" href="projects.html">View all projects <span>→</span></a><p>30+ websites delivered. Filter and search them all on the projects page.</p></div>
 </div></section>
 
 <section id="experience"><div class="wrap">
@@ -293,6 +305,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <footer><div class="wrap"><span>© <span id="yr">2026</span> Ali Kamal. All rights reserved.</span><span>Front-End & WordPress Developer</span></div></footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="projects.js"></script>
+<script>document.getElementById('pj').innerHTML=PROJECTS.filter(p=>p.featured).slice(0,6).map(p=>card(p,'tilt rv')).join('')</script>
 <script>
 (()=>{
 const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
@@ -356,6 +372,35 @@ if(!rm&&matchMedia('(hover:hover)').matches){
 /* contact form opens the visitor's email app */
 $('#f').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.target);
  location.href='mailto:ali.kamalofficial24@gmail.com?subject='+encodeURIComponent('Project enquiry from '+d.get('n'))+'&body='+encodeURIComponent(d.get('m')+'\n\nFrom: '+d.get('n')+' ('+d.get('e')+')')});
+})();
+</script>
+<script>
+/* GSAP entrance + scroll animations (falls back to your CSS animations if GSAP fails to load) */
+(()=>{const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(rm||!window.gsap||!window.ScrollTrigger)return;
+const $=s=>document.querySelector(s);
+document.documentElement.classList.add('gsap-on');gsap.registerPlugin(ScrollTrigger);
+const pre=$('#pre'),pn=$('#pn'),n={v:0};let seen=0;try{seen=sessionStorage.getItem('pre');sessionStorage.setItem('pre',1)}catch(e){}
+gsap.set('.rv',{opacity:0,y:50});
+const tl=gsap.timeline({defaults:{ease:'power4.out'}});let o=0;
+if(!seen){tl.to(n,{v:100,duration:1.4,ease:'power2.inOut',onUpdate:()=>pn.textContent=Math.round(n.v)})
+ .to(pre,{yPercent:-100,duration:1.1,ease:'power4.inOut',onComplete:()=>pre.remove()},'+=.15');o='-=.5'}else pre.remove();
+tl.from('#hd',{yPercent:-120,opacity:0,duration:1},o)
+ .from('#h1 .c',{yPercent:125,rotate:7,duration:1.2,stagger:.07},'<')
+ .from('.hero .fade',{y:32,opacity:0,duration:.9,stagger:.12,clearProps:'opacity,transform'},'-=.8')
+ .from('.port',{scale:.55,opacity:0,rotate:-14,duration:1.6,ease:'expo.out',clearProps:'opacity,transform'},'<.1')
+ .from('.chip',{opacity:0,duration:.6,stagger:.12},'-=.9')
+ .fromTo('.badge',{scale:0,opacity:0},{scale:1,opacity:1,duration:.8,stagger:.15,ease:'back.out(2)'},'-=.7')
+ .from('.scroll',{opacity:0,duration:.6},'-=.3')
+ .add(()=>gsap.to('.badge',{y:-12,duration:3,repeat:-1,yoyo:true,ease:'sine.inOut',stagger:.8}));
+gsap.to('.hg>div:first-child',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+ScrollTrigger.batch('.rv',{start:'top 90%',once:true,onEnter:b=>gsap.to(b,{opacity:1,y:0,duration:1,ease:'power3.out',stagger:.12,overwrite:true,clearProps:'opacity,transform'})});
+gsap.from('.sk .tags span',{scale:.7,opacity:0,duration:.5,stagger:.04,ease:'back.out(2)',clearProps:'opacity,transform',scrollTrigger:{trigger:'.sk',start:'top 80%',once:true}});
+const sk=gsap.quickTo('.mq','skewX',{duration:.4,ease:'power3'});let t;
+ScrollTrigger.create({onUpdate:s=>{sk(gsap.utils.clamp(-6,6,s.getVelocity()/-250));clearTimeout(t);t=setTimeout(()=>sk(0),120)}});
+document.addEventListener('click',e=>{const a=e.target.closest('a[href="projects.html"]');if(!a||e.metaKey||e.ctrlKey)return;
+ e.preventDefault();gsap.to('.wipe',{yPercent:-100,duration:.8,ease:'power4.inOut',onComplete:()=>location.href=a.href})});
+addEventListener('pageshow',e=>{if(e.persisted)gsap.set('.wipe',{yPercent:0})});
 })();
 </script>
 </body>
