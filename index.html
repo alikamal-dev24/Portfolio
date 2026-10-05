@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ali Kamal | Front-End & WordPress Developer</title>
+<meta name="description" content="Ali Kamal is a Front-End and WordPress developer with 4+ years of experience and 30+ custom websites delivered for global clients.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0e12;--bg2:#12151b;--card:#161a22;--line:#262c38;--ink:#f1efe9;--mute:#98a0ae;--a:#ff7a2f;--a2:#ffb36b;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.7 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:110px 0}
+.sh{margin-bottom:48px}
+.sh small{color:var(--a);font-weight:600}
+.sh h2{font-size:clamp(2rem,5vw,3.4rem);margin-top:8px;max-width:16em}
+/* cursor */
+.cur,.ring{position:fixed;top:0;left:0;pointer-events:none;z-index:999;border-radius:50%;display:none}
+.cur{width:8px;height:8px;background:var(--a);margin:-4px 0 0 -4px}
+.ring{width:38px;height:38px;border:1.5px solid var(--a);margin:-19px 0 0 -19px;transition:width .25s,height .25s,margin .25s,background .25s}
+.ring.big{width:72px;height:72px;margin:-36px 0 0 -36px;background:rgba(255,122,47,.14)}
+@media (hover:hover) and (pointer:fine){.cur,.ring{display:block}body{cursor:none}a,button{cursor:none}}
+/* progress */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--a2));z-index:1000}
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:90;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.s{background:rgba(12,14,18,.82);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font:800 1.4rem "Bricolage Grotesque";letter-spacing:-.03em}
+.logo i{color:var(--a);font-style:normal}
+nav ul{display:flex;gap:30px;list-style:none}
+nav a{color:var(--mute);font-weight:500;font-size:.95rem;position:relative;transition:color .2s}
+nav a:after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--a);transition:width .3s}
+nav a:hover,nav a.on{color:var(--ink)}nav a:hover:after,nav a.on:after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;border:1.5px solid var(--line);transition:background .3s,color .3s,border-color .3s;will-change:transform}
+.btn.p{background:var(--a);border-color:var(--a);color:#150a02}
+.btn.p:hover{background:var(--a2);border-color:var(--a2)}
+.btn:not(.p):hover{border-color:var(--a);color:var(--a)}
+.menu{display:none;background:none;border:0;color:var(--ink);width:44px;height:44px}
+.menu span{display:block;width:24px;height:2px;background:currentColor;margin:6px auto;transition:transform .3s,opacity .3s}
+.menu.o span:nth-child(1){transform:translateY(8px) rotate(45deg)}.menu.o span:nth-child(2){opacity:0}.menu.o span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 70px;position:relative;overflow:hidden;--mx:70%;--my:30%}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(520px circle at var(--mx) var(--my),rgba(255,122,47,.2),transparent 60%);pointer-events:none}
+.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.28;-webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000,transparent 70%);mask-image:radial-gradient(ellipse at 60% 40%,#000,transparent 70%);pointer-events:none}
+.hg{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;position:relative;z-index:2}
+.hi{display:inline-flex;align-items:center;gap:10px;color:var(--mute);margin-bottom:18px}
+.hi b{width:9px;height:9px;border-radius:50%;background:#46d68c;box-shadow:0 0 0 0 rgba(70,214,140,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(70,214,140,0)}100%{box-shadow:0 0 0 0 rgba(70,214,140,0)}}
+h1{font-size:clamp(3.6rem,11vw,8.6rem);font-weight:800;line-height:.9}
+h1 .w{display:block;overflow:hidden;padding-bottom:.08em}
+h1 .w:last-child{color:var(--a)}
+h1 .c{display:inline-block;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes up{to{transform:none}}
+.role{font:600 clamp(1.2rem,2.6vw,1.7rem) "Bricolage Grotesque";margin:26px 0 14px;min-height:2.2rem}
+.role em{font-style:normal;color:var(--a2)}
+.role:after{content:"|";margin-left:3px;color:var(--a);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--mute);max-width:34em;margin-bottom:32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.fade{opacity:0;transform:translateY(20px);animation:fi .9s .9s forwards}
+@keyframes fi{to{opacity:1;transform:none}}
+.port{position:relative;aspect-ratio:1;max-width:460px;margin:0 auto;width:100%}
+.orb{position:absolute;inset:6%;border-radius:50%;border:1px dashed #3a4252;animation:spin 40s linear infinite}
+.orb.two{inset:-4%;animation-duration:70s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.core{position:absolute;inset:16%;border-radius:50%;background:radial-gradient(circle at 30% 25%,#ffb36b,#ff7a2f 45%,#7a2b05);display:grid;place-items:center;font:800 clamp(4rem,10vw,7rem) "Bricolage Grotesque";color:#150a02;letter-spacing:-.06em;box-shadow:0 30px 80px -20px rgba(255,122,47,.55);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px)}}
+.chip{position:absolute;padding:8px 16px;background:rgba(22,26,34,.9);border:1px solid var(--line);border-radius:999px;font-size:.85rem;font-weight:600;backdrop-filter:blur(6px);animation:float 5s ease-in-out infinite}
+.chip:nth-of-type(1){top:6%;left:8%}.chip:nth-of-type(2){top:18%;right:-2%;animation-delay:-1s}.chip:nth-of-type(3){bottom:20%;left:-4%;animation-delay:-2s}.chip:nth-of-type(4){bottom:6%;right:10%;animation-delay:-3s}.chip:nth-of-type(5){top:50%;right:-8%;animation-delay:-1.5s}
+.scroll{position:absolute;bottom:26px;left:50%;width:24px;height:40px;border:1.5px solid var(--mute);border-radius:14px;transform:translateX(-50%);z-index:2}
+.scroll:after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--a);animation:wheel 1.6s infinite}
+@keyframes wheel{to{transform:translateY(14px);opacity:0}}
+/* marquee */
+.mq{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--bg2)}
+.mt{display:flex;gap:48px;width:max-content;animation:mq 30s linear infinite;font:700 clamp(1.4rem,3vw,2.2rem) "Bricolage Grotesque";white-space:nowrap}
+.mt span:nth-child(even){color:var(--a)}
+.mq:hover .mt{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* about */
+.ab{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
+.ab p{color:var(--mute);margin-bottom:16px}
+.ab p strong{color:var(--ink);font-weight:600}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.st b{display:block;font:800 clamp(2.4rem,5vw,3.4rem) "Bricolage Grotesque";color:var(--a);line-height:1}
+.st span{color:var(--mute);font-size:.92rem}
+/* cards */
+.grid{display:grid;gap:20px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;position:relative;overflow:hidden;transition:border-color .3s;transform-style:preserve-3d}
+.card:before{content:"";position:absolute;inset:0;background:radial-gradient(300px circle at var(--x,50%) var(--y,0),rgba(255,122,47,.16),transparent 60%);opacity:0;transition:opacity .3s}
+.card:hover{border-color:#4a3a30}.card:hover:before{opacity:1}
+.card>*{position:relative}
+.ic{width:52px;height:52px;border-radius:14px;background:rgba(255,122,47,.12);color:var(--a);display:grid;place-items:center;font:800 1.2rem "Bricolage Grotesque";margin-bottom:22px}
+.card h3{font-size:1.35rem;margin-bottom:10px}
+.card p{color:var(--mute);font-size:.96rem}
+/* skills */
+.sk{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.sk h3{font-size:1.1rem;margin-bottom:18px;color:var(--a2)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{padding:7px 14px;border:1px solid var(--line);border-radius:999px;font-size:.9rem;background:var(--bg2);transition:transform .2s,border-color .2s,color .2s}
+.tags span:hover{transform:translateY(-3px);border-color:var(--a);color:var(--a)}
+/* projects */
+.pj{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.pc{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .3s}
+.pc:hover{border-color:var(--a)}
+.art{aspect-ratio:16/10;background:linear-gradient(135deg,hsl(var(--h) 70% 38%),hsl(calc(var(--h) + 40) 70% 14%));position:relative;overflow:hidden;display:grid;place-items:center}
+.win{width:76%;height:68%;background:rgba(10,12,16,.86);border-radius:10px;padding:10px;transition:transform .6s cubic-bezier(.2,.8,.2,1);box-shadow:0 24px 50px -10px rgba(0,0,0,.6)}
+.pc:hover .win{transform:translateY(-8px) scale(1.05) rotate(-1.5deg)}
+.win i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#3a4252;margin-right:5px}
+.win u{display:block;height:9px;border-radius:5px;background:#252b36;margin-top:9px;text-decoration:none}
+.win u:nth-of-type(1){width:70%;background:hsl(var(--h) 80% 55%)}.win u:nth-of-type(2){width:92%}.win u:nth-of-type(3){width:55%}
+.art b{position:absolute;right:16px;bottom:10px;font:800 4.5rem "Bricolage Grotesque";color:rgba(255,255,255,.12);line-height:1}
+.pi{padding:24px;display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.pi h3{font-size:1.3rem;margin-bottom:6px}
+.pi p{color:var(--mute);font-size:.93rem;margin-bottom:12px}
+.pi .tags span{font-size:.78rem;padding:4px 11px}
+.go{flex:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .3s,color .3s,transform .3s}
+.pc:hover .go{background:var(--a);color:#150a02;transform:rotate(45deg)}
+/* timeline */
+.tl{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tl .card h3{margin-bottom:4px}
+.tl small{color:var(--a);font-weight:600;display:block;margin-bottom:14px}
+.tl ul{color:var(--mute);font-size:.95rem;padding-left:18px}
+.tl li{margin-bottom:8px}
+/* process */
+.pr{counter-reset:s}
+.pr .card:before{display:none}
+.pr .card h3:before{counter-increment:s;content:"0" counter(s);display:block;color:var(--a);font-size:.95rem;margin-bottom:14px}
+/* contact */
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.ct h2{font-size:clamp(2.2rem,5.5vw,4rem);margin-bottom:20px}
+.ct p{color:var(--mute);margin-bottom:28px}
+.cl{list-style:none;display:grid;gap:12px}
+.cl a{display:flex;gap:14px;align-items:center;padding:16px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card);transition:border-color .3s,transform .3s}
+.cl a:hover{border-color:var(--a);transform:translateX(6px)}
+.cl span{color:var(--mute);font-size:.85rem;display:block}
+.cl b{font-weight:600;word-break:break-all}
+form{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-size:.9rem;color:var(--mute)}
+input,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color .2s}
+input:focus,textarea:focus{outline:0;border-color:var(--a)}
+textarea{min-height:130px;resize:vertical}
+button.btn{font:inherit;font-weight:600;justify-content:center;width:100%;cursor:pointer}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mute);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+/* responsive */
+@media(max-width:900px){
+ section{padding:80px 0}
+ .hg,.ab,.ct,.tl{grid-template-columns:1fr}
+ .port{max-width:340px;order:-1}
+ .hero{padding-top:110px}
+ .menu{display:block}
+ nav ul{position:fixed;inset:74px 0 auto 0;flex-direction:column;gap:0;background:rgba(12,14,18,.97);padding:10px 24px 24px;transform:translateY(-130%);transition:transform .4s;border-bottom:1px solid var(--line)}
+ nav ul.o{transform:none}
+ nav li a{display:block;padding:14px 0;font-size:1.1rem}
+ .hide-m{display:none}
+ .scroll{display:none}
+}
+@media(max-width:420px){.pj{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}h1 .c,.fade,.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar"></div><div class="cur"></div><div class="ring"></div>
+
+<header id="hd"><div class="wrap nav">
+  <a href="#home" class="logo">Ali<i>.</i>Kamal</a>
+  <nav aria-label="Main"><ul id="nv">
+    <li><a href="#home" class="on">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#skills">Skills</a></li><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li>
+  </ul></nav>
+  <a href="#contact" class="btn p hide-m mag">Let's talk</a>
+  <button class="menu" id="mb" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap hg">
+  <div>
+    <p class="hi fade"><b></b> Available for freelance projects</p>
+    <h1 id="h1" aria-label="Ali Kamal"><span class="w">Ali</span><span class="w">Kamal</span></h1>
+    <p class="role fade">I'm a <em id="ty">Front-End Developer</em></p>
+    <p class="lead fade">I build fast, responsive and carefully crafted websites. Over 4 years I have delivered 30+ custom projects for clients around the world, from first layout to launch.</p>
+    <div class="cta fade"><a href="#work" class="btn p mag">View my work</a><a href="#contact" class="btn mag">Hire me</a></div>
+  </div>
+  <div class="port tilt" aria-hidden="true">
+    <div class="orb two"></div><div class="orb"></div>
+    <div class="core">AK</div>
+    <span class="chip">HTML5</span><span class="chip">JavaScript</span><span class="chip">WordPress</span><span class="chip">Bricks</span><span class="chip">PHP</span>
+  </div>
+</div><div class="scroll" aria-hidden="true"></div></section>
+
+<div class="mq" aria-hidden="true"><div class="mt" id="mt">
+  <span>Responsive design</span><span>✦</span><span>WordPress</span><span>✦</span><span>Bricks Builder</span><span>✦</span><span>GSAP animations</span><span>✦</span><span>Speed optimization</span><span>✦</span><span>Custom PHP</span><span>✦</span>
+</div></div>
+
+<section id="about"><div class="wrap ab">
+  <div class="rv">
+    <div class="sh"><small>About me</small><h2>Design turned into fast, working websites</h2></div>
+    <p>I'm <strong>Ali Kamal</strong>, a Front-End and WordPress developer based in Multan, Pakistan. I specialise in modern website architecture, responsive layouts and performance.</p>
+    <p>I work comfortably in <strong>HTML5, CSS3, JavaScript, PHP and MySQL</strong>, and I build with Bricks Builder, Oxygen, Elementor and Divi. I enjoy bridging the gap between a designer's vision and a site that loads quickly and works on every device.</p>
+    <p>I hold a Bachelor of Science in Computer Science and speak English and Urdu.</p>
+  </div>
+  <div class="stats">
+    <div class="st rv" style="--d:.05s"><b data-n="4">0</b><span>Years of experience</span></div>
+    <div class="st rv" style="--d:.15s"><b data-n="30">0</b><span>Projects delivered</span></div>
+    <div class="st rv" style="--d:.25s"><b data-n="5">0</b><span>Page builders mastered</span></div>
+    <div class="st rv" style="--d:.35s"><b data-n="100">0</b><span>% remote, worldwide</span></div>
+  </div>
+</div></section>
+
+<section id="services" style="background:var(--bg2)"><div class="wrap">
+  <div class="sh rv"><small>What I do</small><h2>Services built around your goals</h2></div>
+  <div class="grid g4">
+    <article class="card tilt rv"><div class="ic">&lt;/&gt;</div><h3>Front-end development</h3><p>Clean, semantic HTML, CSS and JavaScript with BEM structure and smooth GSAP animation.</p></article>
+    <article class="card tilt rv" style="--d:.1s"><div class="ic">W</div><h3>WordPress and page builders</h3><p>Custom themes and layouts in Bricks, Oxygen, Elementor and Divi that clients can edit easily.</p></article>
+    <article class="card tilt rv" style="--d:.2s"><div class="ic">PHP</div><h3>Dynamic features</h3><p>Custom post types, ACF fields, user login flows and e-commerce structures using PHP and MySQL.</p></article>
+    <article class="card tilt rv" style="--d:.3s"><div class="ic">⚡</div><h3>Speed and security</h3><p>Performance tuning, Wordfence hardening and safe site migrations with Migrate Guru.</p></article>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="sh rv"><small>Skills</small><h2>Tools I use every day</h2></div>
+  <div class="sk">
+    <div class="card rv"><h3>Front-end</h3><div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript ES6+</span><span>BEM</span><span>Responsive design</span><span>GSAP</span></div></div>
+    <div class="card rv" style="--d:.1s"><h3>CMS and builders</h3><div class="tags"><span>WordPress</span><span>Bricks</span><span>Oxygen</span><span>Elementor</span><span>Divi</span><span>Webflow</span></div></div>
+    <div class="card rv" style="--d:.2s"><h3>Back-end and data</h3><div class="tags"><span>PHP</span><span>MySQL</span><span>Custom post types</span><span>ACF</span></div></div>
+    <div class="card rv" style="--d:.3s"><h3>Workflow</h3><div class="tags"><span>Git</span><span>Hostinger</span><span>Wordfence</span><span>Migrate Guru</span><span>Speed optimization</span></div></div>
+  </div>
+</div></section>
+
+<section id="work" style="background:var(--bg2)"><div class="wrap">
+  <div class="sh rv"><small>Selected work</small><h2>Recent client projects</h2></div>
+  <div class="pj">
+    <a class="pc tilt rv" href="https://gmklines.com" target="_blank" rel="noopener"><div class="art" style="--h:22"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>GMK</b></div><div class="pi"><div><h3>GMK Lines</h3><p>Transport services platform with optimized layout structures.</p><div class="tags"><span>Bricks Builder</span><span>Transport</span></div></div><span class="go">↗</span></div></a>
+    <a class="pc tilt rv" style="--d:.1s" href="https://sked.life" target="_blank" rel="noopener"><div class="art" style="--h:265"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>SKED</b></div><div class="pi"><div><h3>SKED</h3><p>Responsive static layouts with interactive UI elements.</p><div class="tags"><span>Divi Builder</span><span>Interactive UI</span></div></div><span class="go">↗</span></div></a>
+    <a class="pc tilt rv" style="--d:.2s" href="https://seretiafrica.com" target="_blank" rel="noopener"><div class="art" style="--h:150"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>SA</b></div><div class="pi"><div><h3>Sereti Africa</h3><p>Clean corporate website for a strategy consulting firm.</p><div class="tags"><span>Bricks Builder</span><span>Corporate</span></div></div><span class="go">↗</span></div></a>
+    <a class="pc tilt rv" href="https://strangerthingshub.com" target="_blank" rel="noopener"><div class="art" style="--h:350"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>ST</b></div><div class="pi"><div><h3>Stranger Things Hub</h3><p>High-traffic content and blogging platform.</p><div class="tags"><span>Bricks Builder</span><span>Blog</span></div></div><span class="go">↗</span></div></a>
+    <a class="pc tilt rv" style="--d:.1s" href="https://intheevent.com" target="_blank" rel="noopener"><div class="art" style="--h:195"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>ITE</b></div><div class="pi"><div><h3>In The Event</h3><p>Custom e-commerce structure and product listings.</p><div class="tags"><span>Oxygen Builder</span><span>E-commerce</span></div></div><span class="go">↗</span></div></a>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="sh rv"><small>Experience and education</small><h2>Where I have worked and studied</h2></div>
+  <div class="tl">
+    <article class="card rv"><h3>Front-End & WordPress Developer</h3><small>Freelance / Contract, global clients · 2022 to present</small>
+      <ul><li>Built 30+ custom, responsive websites and e-commerce platforms across many industries.</li><li>Created dynamic features with PHP, JavaScript and ACF, including custom post types and login flows.</li><li>Handled migrations, Wordfence security setup and speed optimization.</li><li>Turned UI/UX wireframes from international clients into cross-browser layouts.</li></ul></article>
+    <article class="card rv" style="--d:.1s"><h3>BSc in Computer Science</h3><small>University in Pakistan</small>
+      <ul><li>Core computer science fundamentals, web programming, algorithms and software engineering.</li></ul>
+      <h3 style="margin-top:28px">Languages</h3><small>Spoken</small><ul><li>English</li><li>Urdu</li></ul></article>
+  </div>
+</div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+  <div class="sh rv"><small>How I work</small><h2>A simple process from idea to launch</h2></div>
+  <div class="grid g4 pr">
+    <article class="card rv"><h3>Discover</h3><p>We talk through your goals, audience and content.</p></article>
+    <article class="card rv" style="--d:.1s"><h3>Design to layout</h3><p>I turn your wireframes or designs into a clear page structure.</p></article>
+    <article class="card rv" style="--d:.2s"><h3>Build</h3><p>Responsive, fast and tested across browsers and devices.</p></article>
+    <article class="card rv" style="--d:.3s"><h3>Launch</h3><p>Security, speed checks and a smooth handover.</p></article>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap ct">
+  <div class="rv">
+    <h2>Let's build something great together</h2>
+    <p>Have a project in mind? Send a message and I will reply as soon as I can.</p>
+    <ul class="cl">
+      <li><a href="mailto:ali.kamalofficial24@gmail.com"><div><span>Email</span><b>ali.kamalofficial24@gmail.com</b></div></a></li>
+      <li><a href="tel:+923112309012"><div><span>Phone</span><b>+92 311 230 9012</b></div></a></li>
+      <li><a href="https://linkedin.com/in/ali-kamal-7990a1311/" target="_blank" rel="noopener"><div><span>LinkedIn</span><b>linkedin.com/in/ali-kamal-7990a1311</b></div></a></li>
+      <li><a href="#contact"><div><span>Location</span><b>Multan, Pakistan</b></div></a></li>
+    </ul>
+  </div>
+  <form id="f" class="rv" style="--d:.1s">
+    <label>Your name<input name="n" required autocomplete="name"></label>
+    <label>Your email<input type="email" name="e" required autocomplete="email"></label>
+    <label>Project details<textarea name="m" required></textarea></label>
+    <button class="btn p mag" type="submit">Send message</button>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr">2026</span> Ali Kamal. All rights reserved.</span><span>Front-End & WordPress Developer</span></div></footer>
+
+<script>
+(()=>{
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$('#yr').textContent=new Date().getFullYear();
+
+/* hero heading: letters rise one by one */
+$$('#h1 .w').forEach((w,i)=>{const t=w.textContent;w.textContent='';w.setAttribute('aria-hidden','true');
+ [...t].forEach((ch,j)=>{const s=document.createElement('span');s.className='c';s.textContent=ch;s.style.animationDelay=(.15+i*.35+j*.07)+'s';w.appendChild(s)})});
+
+/* typing role */
+const roles=['Front-End Developer','WordPress Developer','Bricks Builder Expert','Performance Specialist'],ty=$('#ty');let ri=0,ci=roles[0].length,del=true;
+if(!rm)(function tick(){const r=roles[ri];
+ if(del){ci--;if(ci<=0){del=false;ri=(ri+1)%roles.length}}else{ci++;if(ci>=roles[ri].length)del=true}
+ ty.textContent=roles[ri].slice(0,ci);
+ setTimeout(tick,ci>=roles[ri].length&&del?1800:del?35:75)})();
+
+/* marquee: duplicate for seamless loop */
+const mt=$('#mt');mt.innerHTML+=mt.innerHTML;
+
+/* header, progress, active link */
+const hd=$('#hd'),bar=$('#bar'),links=$$('nav a'),secs=links.map(a=>$(a.getAttribute('href')));
+addEventListener('scroll',()=>{const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+ hd.classList.toggle('s',y>20);bar.style.width=(y/h*100)+'%';
+ let cur=0;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<innerHeight*.4)cur=i});
+ links.forEach((a,i)=>a.classList.toggle('on',i===cur))},{passive:true});
+
+/* mobile menu */
+const mb=$('#mb'),nv=$('#nv');
+mb.onclick=()=>{const o=nv.classList.toggle('o');mb.classList.toggle('o',o);mb.setAttribute('aria-expanded',o)};
+links.forEach(a=>a.addEventListener('click',()=>{nv.classList.remove('o');mb.classList.remove('o')}));
+
+/* scroll reveal + counters */
+const count=el=>{const n=+el.dataset.n;let s=null;
+ const f=t=>{s??=t;const p=Math.min((t-s)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+(n>=30&&n<100?'+':n===4?'+':'');if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const b=$('b[data-n]',e.target);if(b&&!b.done){b.done=1;rm?b.textContent=b.dataset.n:count(b)}io.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach(el=>io.observe(el));
+
+/* hero spotlight follows the mouse */
+const hero=$('.hero');
+hero.addEventListener('mousemove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--mx',e.clientX-r.left+'px');hero.style.setProperty('--my',e.clientY-r.top+'px')});
+
+/* custom cursor */
+const cur=$('.cur'),ring=$('.ring');let mx=0,my=0,rx=0,ry=0;
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+ addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.transform=`translate(${mx}px,${my}px)`});
+ (function loop(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop)})();
+ document.addEventListener('mouseover',e=>ring.classList.toggle('big',!!e.target.closest('a,button,.card')))}
+
+/* card glow + 3D tilt, magnetic buttons */
+if(!rm&&matchMedia('(hover:hover)').matches){
+ $$('.tilt').forEach(el=>{el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+  el.style.setProperty('--x',x+'px');el.style.setProperty('--y',y+'px');
+  const k=el.classList.contains('port')?10:5;
+  el.style.transform=`perspective(900px) rotateX(${(.5-y/r.height)*k}deg) rotateY(${(x/r.width-.5)*k}deg)`});
+  el.addEventListener('mouseleave',()=>{el.style.transform='';el.style.transition='transform .5s'});
+  el.addEventListener('mouseenter',()=>el.style.transition='transform .1s,border-color .3s')});
+ $$('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.4}px)`});
+  b.addEventListener('mouseleave',()=>b.style.transform='')})}
+
+/* contact form opens the visitor's email app */
+$('#f').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.target);
+ location.href='mailto:ali.kamalofficial24@gmail.com?subject='+encodeURIComponent('Project enquiry from '+d.get('n'))+'&body='+encodeURIComponent(d.get('m')+'\n\nFrom: '+d.get('n')+' ('+d.get('e')+')')});
+})();
+</script>
+</body>
+</html>
