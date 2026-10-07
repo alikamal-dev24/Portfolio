@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio.alikamal-dev24.workers.dev/sitemap.xml
