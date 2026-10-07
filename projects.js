@@ -1,9 +1,4 @@
-/* ====== ALL YOUR CONTENT LIVES HERE ======
- PROJECTS: copy one line to add a project. featured:true = shown first on projects page (the home page
- shows the 4 hand-picked in index.html). shot = screenshot file in assets/work/ (card falls back to a
- colour tile if the file is missing). Add a  case:{...}  object to a project to unlock its case-study page:
-   case:{client:"",industry:"",year:"2024",role:"",challenge:"",approach:"",built:["",""],result:"",gallery:["assets/work/x-mobile.webp"]}
- Only fill in facts that are TRUE. Empty fields are simply not shown. */
+
 window.PROJECTS=[
  {
   "name": "GMK Lines",
