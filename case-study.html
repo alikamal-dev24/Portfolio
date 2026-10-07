@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +30,7 @@ section{padding:110px 0}
 .cur{width:8px;height:8px;background:var(--a);margin:-4px 0 0 -4px}
 .ring{width:38px;height:38px;border:1.5px solid var(--a);margin:-19px 0 0 -19px;transition:width .25s,height .25s,margin .25s,background .25s}
 .ring.big{width:72px;height:72px;margin:-36px 0 0 -36px;background:rgba(255,122,47,.14)}
-
+@media (hover:hover) and (pointer:fine){.cur,.ring{display:block}body{cursor:none}a,button{cursor:none}}
 /* progress */
 #bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--a2));z-index:1000}
 /* nav */
@@ -197,8 +197,6 @@ html.gsap-on .fade{animation:none;opacity:1;transform:none}
 html.gsap-on .rv{opacity:1;transform:none;transition:none}
 html.gsap-on h1 .c{animation:none;transform:none}
 .sub{color:var(--mute);margin-top:14px;max-width:34em}
-.hero .hg{grid-template-columns:1.6fr 1fr;width:100%}.hero h1{font-size:clamp(2.3rem,4.6vw,4.1rem);line-height:1.02;font-weight:800;letter-spacing:-.035em}
-.hero h1 .w{padding-bottom:.1em}
 .hero .lead{font-size:1.1rem}
 .trust{margin-top:26px;color:var(--mute);font-size:.92rem}
 .proj{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,70px);align-items:center;margin-bottom:clamp(64px,9vw,120px)}
@@ -249,16 +247,43 @@ select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(-
 .stk{position:fixed;z-index:80;right:24px;bottom:calc(24px + env(safe-area-inset-bottom,0px));background:var(--a);color:#150a02;font-weight:700;padding:14px 26px;border-radius:999px;box-shadow:0 18px 40px -12px rgba(255,122,47,.6);transform:translateY(160%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .stk.on{transform:none}.stk .m{display:none}
 footer .fl2{display:flex;gap:22px;flex-wrap:wrap}footer a:hover{color:var(--a)}
-@media(max-width:900px){.proj,.proj.alt,.ab2{grid-template-columns:1fr}.proj.alt .frame{order:0}.port{display:none}.me{max-width:300px}}
+.svl{border-bottom:1px solid var(--line)}
+.sv{display:grid;grid-template-columns:70px 1.1fr 1fr;gap:24px;align-items:center;padding:32px 0;border-top:1px solid var(--line);transition:padding .4s,background .4s}
+.sv:hover{padding-left:18px;background:linear-gradient(90deg,rgba(255,122,47,.09),transparent)}
+.sn{font:800 1.1rem "Bricolage Grotesque";color:var(--a)}
+.sv h3{font-size:clamp(1.4rem,2.6vw,2rem);margin-bottom:8px}.sv p{color:var(--mute);max-width:34em}
+.sv ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;justify-content:flex-end}
+.sv li{font-size:.8rem;border:1px solid var(--line);padding:5px 13px;border-radius:999px;color:var(--mute)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tabs button{font:inherit;font-weight:600;color:var(--mute);background:var(--card);border:1px solid var(--line);padding:11px 20px;border-radius:999px;cursor:pointer;transition:.25s}
+.tabs button:hover{color:var(--ink)}.tabs button[aria-selected="true"]{background:var(--a);border-color:var(--a);color:#150a02}
+.tp{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(20px,4vw,50px)}
+.tp[hidden]{display:none}.tp h3{font-size:clamp(1.4rem,2.6vw,2rem);margin-bottom:10px}.tp .k{color:var(--a);font-weight:600;font-size:.85rem;margin-bottom:8px;display:block}
+.tp p{color:var(--mute)}.tp ul{list-style:none;display:grid;gap:12px}.tp li{color:var(--mute);padding-left:26px;position:relative}.tp li:before{content:"→";position:absolute;left:0;color:var(--a)}
+.tp .tags{margin-top:18px}
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.bt{border:1px solid var(--line);background:var(--card);border-radius:22px;padding:28px;position:relative;overflow:hidden;grid-column:span 3;transition:transform .4s,border-color .3s}
+.bt:hover{transform:translateY(-6px);border-color:var(--a)}
+.bt h3{font-size:1.35rem;margin:46px 0 8px}.bt p{color:var(--mute)}
+.bt .gl{position:absolute;top:18px;right:22px;font:800 2.2rem "Bricolage Grotesque";color:var(--a);opacity:.9}
+.bt.big{grid-row:span 2;background:linear-gradient(150deg,#ff8a45,#d4501a);border:0;color:#1a0a02;display:flex;flex-direction:column;justify-content:flex-end}
+.bt.big h3{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-top:0}.bt.big p{color:rgba(26,10,2,.78);font-size:1.05rem}.bt.big .gl{color:#1a0a02;font-size:4rem;opacity:.25}
+.bt.wide{grid-column:span 6;display:flex;gap:24px;align-items:center;flex-wrap:wrap}.bt.wide h3{margin:0;flex:1 1 220px}.bt.wide p{flex:2 1 320px}
+.tlh{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;list-style:none;position:relative}
+.tlh:before,.tlh:after{content:"";position:absolute;top:11px;left:0;height:2px}
+.tlh:before{right:0;background:var(--line)}.tlh:after{width:0;background:linear-gradient(90deg,var(--a),var(--a2,#ffb36b));transition:width 1.8s cubic-bezier(.3,.7,.2,1)}
+.tlh.in:after{width:100%}
+.tlh li{position:relative;padding-top:50px}
+.tlh .dot{position:absolute;top:0;left:0;width:24px;height:24px;border-radius:50%;background:var(--bg);border:2px solid var(--a);box-shadow:0 0 0 6px var(--bg);z-index:1}
+.tlh small{font:700 .8rem "Bricolage Grotesque";color:var(--a);letter-spacing:.1em;text-transform:uppercase}
+.tlh h3{font-size:1.5rem;margin:6px 0 8px}.tlh p{color:var(--mute);font-size:.96rem}
+.rhead{text-align:center;margin:0 auto 40px}.rhead h2{max-width:none;text-align:center;margin-inline:auto}.rhead .sub{margin:14px auto 0}
+.rtrust{text-align:center;color:var(--mute);margin-top:30px;font-size:.95rem}
+@media(max-width:900px){.tp{grid-template-columns:1fr}.tlh{grid-template-columns:1fr;gap:30px}.tlh:before,.tlh:after{top:0;left:11px;width:2px}.tlh:before{bottom:0;right:auto}.tlh:after{width:2px;height:0;transition:height 1.8s}.tlh.in:after{width:2px;height:100%}.tlh li{padding:0 0 0 50px}.tlh .dot{top:2px}}
+@media(max-width:900px){.proj,.proj.alt,.ab2{grid-template-columns:1fr}.proj.alt .frame{order:0}.me{max-width:300px}.sv{grid-template-columns:56px 1fr}.sv ul{grid-column:2;justify-content:flex-start}.bento{grid-template-columns:1fr}.bt,.bt.big,.bt.wide{grid-column:auto;grid-row:auto}}
 @media(max-width:700px){.stk{left:16px;right:16px;text-align:center;bottom:calc(12px + env(safe-area-inset-bottom,0px))}.stk .d{display:none}.stk .m{display:inline}footer{padding-bottom:90px}}
 @media(max-width:560px){.two{grid-template-columns:1fr}}
-
-.cs{padding:150px 0 80px}.cs h1{font-size:clamp(2.6rem,8vw,6rem)}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:36px 0}
-.facts div{border-top:1px solid var(--line);padding-top:12px}.facts span{display:block;color:var(--mute);font-size:.82rem}.facts b{font-weight:600}
-.cs h2{font-size:clamp(1.5rem,3vw,2.2rem);margin:56px 0 14px}.cs p,.cs li{color:var(--mute);max-width:46em}.cs ul{padding-left:20px}.cs li{margin-bottom:8px}
-.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.gal img{width:100%;border-radius:14px;border:1px solid var(--line)}
-.back{display:inline-block;color:var(--mute);margin-bottom:26px}.back:hover{color:var(--a)}.end{margin-top:70px;text-align:center}.end h2{margin-top:0}
-</style>
+.cs{padding:150px 0 80px}.cs h1{font-size:clamp(2.6rem,8vw,6rem)}.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin:36px 0} .facts div{border-top:1px solid var(--line);padding-top:12px}.facts span{display:block;color:var(--mute);font-size:.82rem}.facts b{font-weight:600} .cs h2{font-size:clamp(1.5rem,3vw,2.2rem);margin:56px 0 14px}.cs p,.cs li{color:var(--mute);max-width:46em}.cs ul{padding-left:20px}.cs li{margin-bottom:8px} .cs .tags{margin-top:6px}.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.gal img{width:100%;border-radius:14px;border:1px solid var(--line)} .back{display:inline-block;color:var(--mute);margin-bottom:26px}.back:hover{color:var(--a)}.end{margin-top:70px;text-align:center}.end h2{margin-top:0} </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -271,7 +296,7 @@ footer .fl2{display:flex;gap:22px;flex-wrap:wrap}footer a:hover{color:var(--a)}
   <a href="index.html#contact" class="btn p hide-m mag">Let's Talk</a>
   <button class="menu" id="mb" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
-<main id="main"><section class="cs"><div class="wrap" id="root"><p class="cnt">Loading…</p></div></section></main>
+<div class="cur"></div><div class="ring"></div><main id="main"><section class="cs"><div class="wrap" id="root"><p class="cnt">Loading…</p></div></section></main>
 <footer><div class="wrap"><span>© <span id="yr">2026</span> Ali Kamal. All rights reserved.</span><a href="index.html#contact">Start a project with me →</a></div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="projects.js"></script>
@@ -280,19 +305,26 @@ footer .fl2{display:flex;gap:22px;flex-wrap:wrap}footer a:hover{color:var(--a)}
 $('#yr').textContent=new Date().getFullYear();
 const hd=$('#hd');addEventListener('scroll',()=>hd.classList.toggle('s',scrollY>20),{passive:true});
 const mb=$('#mb'),nv=$('#nv');mb.onclick=()=>{const o=nv.classList.toggle('o');mb.classList.toggle('o',o);mb.setAttribute('aria-expanded',o)};
+const cur=$('.cur'),ring=$('.ring');let mx=0,my=0,rx=0,ry=0;
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.transform=`translate(${mx}px,${my}px)`});
+ (function l(){rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(l)})();
+ document.addEventListener('mouseover',e=>ring.classList.toggle('big',!!e.target.closest('a,button')))}
 const e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const p=PROJECTS.find(x=>x.slug===new URLSearchParams(location.search).get('p')),r=$('#root');
 if(!p){r.innerHTML='<a class="back" href="projects.html">← All projects</a><h1>Project not found</h1>'}else{const c=p.case||{};
- document.title=p.name+' — Case Study | Ali Kamal';
- const facts=[['Client',c.client],['Industry',c.industry||p.cat],['Year',c.year],['Role',c.role||'Front-end & WordPress development'],['Technology',['WordPress',p.builder].join(' · ')]].filter(x=>x[1]);
+ document.title=p.name+' — Case Study | Ali Kamal';const md=document.querySelector('meta[name=description]');if(md)md.content=p.desc;
+ const facts=[['Industry',p.cat],['Role',p.role],['Technology',p.tech.join(' · ')],['Client',c.client],['Year',c.year]].filter(x=>x[1]);
  const sec=(t,b)=>b?`<h2>${t}</h2>${b}`:'';
  r.innerHTML=`<a class="back" href="projects.html">← All projects</a><small style="color:var(--a);font-weight:600;display:block">Case study</small><h1>${e(p.name)}</h1>
  <div class="facts">${facts.map(f=>`<div><span>${f[0]}</span><b>${e(f[1])}</b></div>`).join('')}</div>
- <div class="frame"><div class="fb"><i></i><i></i><i></i><span>${e(p.url.replace('https://',''))}</span></div><div class="screen" style="--h:${p.h}"><b>${e(p.abbr)}</b><img src="${e(p.shot)}" alt="${e(p.name)} website" onerror="this.remove()"></div></div>
+ <div class="frame"><div class="fb"><i></i><i></i><i></i><span>${e(p.url.replace('https://','').replace(/[/]$/,''))}</span></div><div class="screen" style="--h:${p.h}"><b>${e(p.abbr)}</b><img src="${e(p.shot)}" alt="${e(p.name)} website" onerror="this.remove()"></div></div>
  ${sec('Overview','<p>'+e(c.overview||p.desc)+'</p>')}${sec('The challenge',c.challenge&&'<p>'+e(c.challenge)+'</p>')}${sec('The approach',c.approach&&'<p>'+e(c.approach)+'</p>')}
- ${sec('What I built',c.built&&'<ul>'+c.built.map(x=>'<li>'+e(x)+'</li>').join('')+'</ul>')}${sec('The result',c.result&&'<p>'+e(c.result)+'</p>')}
+ ${sec('What I built',c.built&&'<ul>'+c.built.map(x=>'<li>'+e(x)+'</li>').join('')+'</ul>')}
+ ${sec('Key website areas',c.areas&&'<div class="tags">'+c.areas.map(x=>'<span>'+e(x)+'</span>').join('')+'</div>')}
+ ${sec('Technology','<div class="tags">'+p.tech.map(x=>'<span>'+e(x)+'</span>').join('')+'</div>')}
+ ${sec('The result',c.result&&'<p>'+e(c.result)+'</p>')}
  ${sec('Gallery',c.gallery&&'<div class="gal">'+c.gallery.map(g=>`<img src="${e(g)}" alt="${e(p.name)} screenshot" loading="lazy">`).join('')+'</div>')}
- <div class="end"><h2>Have a similar project? Let's talk.</h2><div class="cta" style="justify-content:center"><a class="btn p" href="index.html#contact">Start a Conversation →</a><a class="btn" href="${e(p.url)}" target="_blank" rel="noopener">View Website ↗</a></div></div>`;
+ <div class="end"><h2>Have a similar project? Let's build it.</h2><div class="cta" style="justify-content:center"><a class="btn p" href="index.html#contact">Start a Conversation →</a><a class="btn" href="${e(p.url)}" target="_blank" rel="noopener">View Live Website ↗</a></div></div>`;
  if(!rm&&window.gsap)gsap.from('.cs .wrap>*',{y:40,opacity:0,duration:.9,stagger:.08,ease:'power3.out',clearProps:'opacity,transform'})}
 })();
 </script>
