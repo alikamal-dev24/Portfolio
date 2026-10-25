@@ -9,7 +9,7 @@ js/data.js          YOUR CONTENT: projects + testimonials (edit this most often)
 js/main.js          Home page behaviour (typing role, cursor, tabs, slider, form, GSAP)
 js/projects-page.js Projects page (search, filters, show more)
 js/case-study.js    Builds a case-study page from data.js
-assets/work/        Project screenshots:  <slug>.webp  (e.g. ric-architects.webp)
+assets/work/        Optional project screenshots: <slug>.webp; cards show initials until real screenshots are added
 assets/ali-kamal.webp  Your photo (optional)
 robots.txt, sitemap.xml
 ```
@@ -21,8 +21,8 @@ Add a `case:{...}` object to give it a case-study page. Only write facts that ar
 ## Change which projects show on the home page
 The home page shows the 4 hand-picked in `index.html` (search for `class="proj`).
 
-## Publish a testimonial
-Move it from the commented "held back" list into `window.TESTIMONIALS` in `js/data.js`.
+## Testimonials
+Keep `window.TESTIMONIALS` empty until each client approves the exact quote and attribution. Never publish drafted or unverified reviews as client testimonials.
 
 ## Contact form
 Paste a Formspree URL into `data-endpoint=""` on `<form id="f">` in `index.html`.
