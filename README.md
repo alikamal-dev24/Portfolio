@@ -9,7 +9,7 @@ js/data.js          YOUR CONTENT: projects + testimonials (edit this most often)
 js/main.js          Home page behaviour (typing role, cursor, tabs, slider, form, GSAP)
 js/projects-page.js Projects page (search, filters, show more)
 js/case-study.js    Builds a case-study page from data.js
-assets/work/        Optional project screenshots: <slug>.png; cards show initials until real screenshots are added
+assets/work/        Optional project screenshots: <slug>.jpg; cards show initials until real screenshots are added
 assets/ali-kamal.webp  Your photo (optional)
 robots.txt, sitemap.xml
 ```

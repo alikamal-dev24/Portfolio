@@ -28,7 +28,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": true,
   "slug": "ric-architects",
-  "shot": "assets/work/ric-architects.png",
+  "shot": "assets/work/ric-architects.jpg",
   "case": {
    "overview": "RIC Architects is an architecture practice serving Bowral, Sydney and Canberra. The website presents the firm's portfolio, expertise, residential development work, homes, commercial and retail projects and architectural services.",
    "approach": "Built and structured the site using WordPress, Bricks Builder and ACF to support a premium, architecture-focused presentation and flexible content management.",
@@ -66,7 +66,7 @@ window.PROJECTS=[
   "role": "WordPress Development + Custom Plugin Development",
   "featured": true,
   "slug": "vip-lease",
-  "shot": "assets/work/vip-lease.png",
+  "shot": "assets/work/vip-lease.jpg",
   "case": {
    "overview": "VIP Lease is a car-leasing website. The project needed more than standard WordPress page development, so it included a custom PHP plugin.",
    "challenge": "The project required custom functionality around automotive leasing and lead capture.",
@@ -123,7 +123,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": true,
   "slug": "maverick-overhead-doors",
-  "shot": "assets/work/maverick-overhead-doors.png",
+  "shot": "assets/work/maverick-overhead-doors.jpg",
   "case": {
    "overview": "Maverick Overhead Doors is a garage-door company serving Southern Utah. The website presents garage door repair, installation, openers, spring replacement, remotes and keypads, tune-ups, financing, reviews, service areas, and online booking and contact paths.",
    "challenge": "Present multiple local services and service areas while keeping the site conversion-focused for homeowners.",
@@ -219,7 +219,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "in-the-event",
-  "shot": "assets/work/in-the-event.png",
+  "shot": "assets/work/in-the-event.jpg",
   "case": {
    "overview": "In The Event is a full-service event production and rental company serving Utah and beyond. The website presents event planning, design, audio/visual, rentals, staging, decor, corporate events, galas, trade shows and digital events.",
    "challenge": "The site needed to communicate a broad range of event services while making a large amount of content easy to navigate.",
@@ -272,7 +272,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "harris-le-roy-architecture",
-  "shot": "assets/work/harris-le-roy-architecture.png",
+  "shot": "assets/work/harris-le-roy-architecture.jpg",
   "case": {
    "overview": "Harris Le Roy Architecture is a New York-based boutique architecture studio focused on identity-driven residential architecture, heritage townhouses, high-performance residences, waterfront homes and adaptive reuse.",
    "approach": "Created a flexible WordPress architecture site with structured project content, service sections, testimonials, resources and strong consultation calls to action.",
@@ -324,7 +324,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "great-artist-program",
-  "shot": "assets/work/great-artist-program.png"
+  "shot": "assets/work/great-artist-program.jpg"
  },
  {
   "name": "StoryTown.ai",
@@ -350,7 +350,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "storytown-ai",
-  "shot": "assets/work/storytown-ai.png"
+  "shot": "assets/work/storytown-ai.jpg"
  },
  {
   "name": "Nutriex",
@@ -378,7 +378,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "nutriex",
-  "shot": "assets/work/nutriex.png"
+  "shot": "assets/work/nutriex.jpg"
  },
  {
   "name": "Smart Kids Development Center",
@@ -404,7 +404,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "smart-kids-development-center",
-  "shot": "assets/work/smart-kids-development-center.png"
+  "shot": "assets/work/smart-kids-development-center.jpg"
  },
  {
   "name": "Safety Management Group",
@@ -429,7 +429,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "safety-management-group",
-  "shot": "assets/work/safety-management-group.png"
+  "shot": "assets/work/safety-management-group.jpg"
  },
  {
   "name": "Drone Round Defense",
@@ -456,7 +456,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "drone-round-defense",
-  "shot": "assets/work/drone-round-defense.png"
+  "shot": "assets/work/drone-round-defense.jpg"
  },
  {
   "name": "Heal With Gail",
@@ -481,7 +481,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "heal-with-gail",
-  "shot": "assets/work/heal-with-gail.png"
+  "shot": "assets/work/heal-with-gail.jpg"
  },
  {
   "name": "Upartments",
@@ -509,7 +509,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "upartments",
-  "shot": "assets/work/upartments.png"
+  "shot": "assets/work/upartments.jpg"
  },
  {
   "name": "HLB Multi-Services",
@@ -532,7 +532,7 @@ window.PROJECTS=[
   "role": "Created several new pages",
   "featured": false,
   "slug": "hlb-multi-services",
-  "shot": "assets/work/hlb-multi-services.png"
+  "shot": "assets/work/hlb-multi-services.jpg"
  },
  {
   "name": "Maadaadizi",
@@ -556,7 +556,7 @@ window.PROJECTS=[
   "role": "Created several new pages",
   "featured": false,
   "slug": "maadaadizi",
-  "shot": "assets/work/maadaadizi.png"
+  "shot": "assets/work/maadaadizi.jpg"
  },
  {
   "name": "Fierce Arms",
