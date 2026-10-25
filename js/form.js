@@ -20,7 +20,7 @@
   var btnHTML = btn ? btn.innerHTML : '';
   var endpoint = (form.getAttribute('data-endpoint') || '').trim();
   var key = (form.getAttribute('data-key') || '').trim();
-  var toEmail = (form.getAttribute('data-email') || 'ali.kamalofficial24@gmail.com').trim();
+  var toEmail = (form.getAttribute('data-email') || 'alikamal.dev24@gmail.com').trim();
   var subject = form.getAttribute('data-subject') || 'New project enquiry from your portfolio';
   var openedAt = Date.now();
   var COOLDOWN_MS = 30000;
