@@ -28,7 +28,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": true,
   "slug": "ric-architects",
-  "shot": "assets/work/ric-architects.webp",
+  "shot": "assets/work/ric-architects.jpg",
   "case": {
    "overview": "RIC Architects is an architecture practice serving Bowral, Sydney and Canberra. The website presents the firm's portfolio, expertise, residential development work, homes, commercial and retail projects and architectural services.",
    "approach": "Built and structured the site using WordPress, Bricks Builder and ACF to support a premium, architecture-focused presentation and flexible content management.",
@@ -66,7 +66,7 @@ window.PROJECTS=[
   "role": "WordPress Development + Custom Plugin Development",
   "featured": true,
   "slug": "vip-lease",
-  "shot": "assets/work/vip-lease.webp",
+  "shot": "assets/work/vip-lease.jpg",
   "case": {
    "overview": "VIP Lease is a car-leasing website. The project needed more than standard WordPress page development, so it included a custom PHP plugin.",
    "challenge": "The project required custom functionality around automotive leasing and lead capture.",
@@ -123,7 +123,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": true,
   "slug": "maverick-overhead-doors",
-  "shot": "assets/work/maverick-overhead-doors.webp",
+  "shot": "assets/work/maverick-overhead-doors.jpg",
   "case": {
    "overview": "Maverick Overhead Doors is a garage-door company serving Southern Utah. The website presents garage door repair, installation, openers, spring replacement, remotes and keypads, tune-ups, financing, reviews, service areas, and online booking and contact paths.",
    "challenge": "Present multiple local services and service areas while keeping the site conversion-focused for homeowners.",
@@ -219,7 +219,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "in-the-event",
-  "shot": "assets/work/in-the-event.webp",
+  "shot": "assets/work/in-the-event.jpg",
   "case": {
    "overview": "In The Event is a full-service event production and rental company serving Utah and beyond. The website presents event planning, design, audio/visual, rentals, staging, decor, corporate events, galas, trade shows and digital events.",
    "challenge": "The site needed to communicate a broad range of event services while making a large amount of content easy to navigate.",
@@ -272,7 +272,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "harris-le-roy-architecture",
-  "shot": "assets/work/harris-le-roy-architecture.webp",
+  "shot": "assets/work/harris-le-roy-architecture.jpg",
   "case": {
    "overview": "Harris Le Roy Architecture is a New York-based boutique architecture studio focused on identity-driven residential architecture, heritage townhouses, high-performance residences, waterfront homes and adaptive reuse.",
    "approach": "Created a flexible WordPress architecture site with structured project content, service sections, testimonials, resources and strong consultation calls to action.",
@@ -324,7 +324,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "great-artist-program",
-  "shot": "assets/work/great-artist-program.webp"
+  "shot": "assets/work/great-artist-program.jpg"
  },
  {
   "name": "StoryTown.ai",
@@ -350,7 +350,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "storytown-ai",
-  "shot": "assets/work/storytown-ai.webp"
+  "shot": "assets/work/storytown-ai.jpg"
  },
  {
   "name": "Nutriex",
@@ -378,7 +378,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "nutriex",
-  "shot": "assets/work/nutriex.webp"
+  "shot": "assets/work/nutriex.jpg"
  },
  {
   "name": "Smart Kids Development Center",
@@ -404,7 +404,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "smart-kids-development-center",
-  "shot": "assets/work/smart-kids-development-center.webp"
+  "shot": "assets/work/smart-kids-development-center.jpg"
  },
  {
   "name": "Safety Management Group",
@@ -429,7 +429,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "safety-management-group",
-  "shot": "assets/work/safety-management-group.webp"
+  "shot": "assets/work/safety-management-group.jpg"
  },
  {
   "name": "Drone Round Defense",
@@ -456,7 +456,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "drone-round-defense",
-  "shot": "assets/work/drone-round-defense.webp"
+  "shot": "assets/work/drone-round-defense.jpg"
  },
  {
   "name": "Heal With Gail",
@@ -481,7 +481,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "heal-with-gail",
-  "shot": "assets/work/heal-with-gail.webp"
+  "shot": "assets/work/heal-with-gail.jpg"
  },
  {
   "name": "Upartments",
@@ -509,7 +509,7 @@ window.PROJECTS=[
   "role": "Website Development",
   "featured": false,
   "slug": "upartments",
-  "shot": "assets/work/upartments.webp"
+  "shot": "assets/work/upartments.jpg"
  },
  {
   "name": "HLB Multi-Services",
@@ -532,7 +532,7 @@ window.PROJECTS=[
   "role": "Created several new pages",
   "featured": false,
   "slug": "hlb-multi-services",
-  "shot": "assets/work/hlb-multi-services.webp"
+  "shot": "assets/work/hlb-multi-services.jpg"
  },
  {
   "name": "Maadaadizi",
@@ -556,7 +556,7 @@ window.PROJECTS=[
   "role": "Created several new pages",
   "featured": false,
   "slug": "maadaadizi",
-  "shot": "assets/work/maadaadizi.webp"
+  "shot": "assets/work/maadaadizi.jpg"
  },
  {
   "name": "Fierce Arms",
@@ -584,40 +584,7 @@ window.PROJECTS=[
   "shot": "assets/work/fierce-arms.webp"
  }
 ];
-/* TESTIMONIALS shown in the slider. Held back until the names are confirmed (move into the list to publish):
-[
- {
-  "quote": "Working with Ali was a great experience. He was professional, responsive, and paid attention to the small details that make a website feel complete. He understood the requirements quickly and delivered a website that was both clean and functional. I would happily work with him again.",
-  "name": "Ali",
-  "role": "Client"
- },
- {
-  "quote": "Working with Ali was a really smooth experience. He understood the project quickly and was able to turn our ideas into a professional-looking website. He was responsive throughout the process and made sure everything was working properly before completion.",
-  "name": "CONFIRM: Mark or Amna",
-  "role": "Client"
- }
-] */
-window.TESTIMONIALS=[
- {
-  "quote": "Ali was great to work with from start to finish. He understood what we needed, paid close attention to the details, and made sure everything worked properly across different devices. The communication was clear and the final website turned out really well. I’d definitely recommend working with Ali.",
-  "name": "Pedro Eloy",
-  "role": "Client"
- },
- {
-  "quote": "Ali is very reliable and easy to work with. He understands WordPress and front-end development really well and is always focused on getting the details right. He was able to take our requirements and turn them into a clean, professional website. Really happy with the work.",
-  "name": "Zeeshan",
-  "role": "Client / Collaborator"
- },
- {
-  "quote": "I’ve worked with Ali on several website projects and he has consistently delivered solid work. He’s good at understanding requirements, solving technical problems, and making sure the final result looks polished. Communication was straightforward and he was always willing to make improvements when needed.",
-  "name": "Fahad",
-  "role": "Client / Collaborator"
- },
- {
-  "quote": "Ali did an excellent job on the website. He was easy to communicate with, understood the requirements well, and handled the development side professionally. I especially appreciated his attention to responsive design and the overall user experience. Highly recommended.",
-  "name": "Muneeb",
-  "role": "Client / Collaborator"
- }
-];
+/* Keep testimonials empty until each client approves the exact words and attribution for publication. */
+window.TESTIMONIALS=[];
 window.card=(p,c="")=>{const h=p.case?`case-study.html?p=${p.slug}`:p.url,x=p.case?"":' target="_blank" rel="noopener"';
 return `<a class="pc ${c}" href="${h}"${x}><div class="art" style="--h:${p.h}"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>${p.abbr}</b><img src="${p.shot}" alt="${p.name} website" loading="lazy" onerror="this.remove()"></div><div class="pi"><div><h3>${p.name}</h3><p>${p.desc}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join("")}</div></div><span class="go">↗</span></div></a>`};

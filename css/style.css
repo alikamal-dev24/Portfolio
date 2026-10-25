@@ -1010,11 +1010,14 @@ footer .wrap {
     background: rgba(12,14,18,.97);
     padding: 10px 24px 24px;
     transform: translateY(-130%);
-    transition: transform .4s;
+    visibility: hidden;
+    transition: transform .4s, visibility 0s linear .4s;
     border-bottom: 1px solid var(--line);
   }
   nav ul.o {
     transform: none;
+    visibility: visible;
+    transition-delay: 0s;
   }
   nav li a {
     display: block;
