@@ -584,40 +584,7 @@ window.PROJECTS=[
   "shot": "assets/work/fierce-arms.webp"
  }
 ];
-/* TESTIMONIALS shown in the slider. Held back until the names are confirmed (move into the list to publish):
-[
- {
-  "quote": "Working with Ali was a great experience. He was professional, responsive, and paid attention to the small details that make a website feel complete. He understood the requirements quickly and delivered a website that was both clean and functional. I would happily work with him again.",
-  "name": "Ali",
-  "role": "Client"
- },
- {
-  "quote": "Working with Ali was a really smooth experience. He understood the project quickly and was able to turn our ideas into a professional-looking website. He was responsive throughout the process and made sure everything was working properly before completion.",
-  "name": "CONFIRM: Mark or Amna",
-  "role": "Client"
- }
-] */
-window.TESTIMONIALS=[
- {
-  "quote": "Ali was great to work with from start to finish. He understood what we needed, paid close attention to the details, and made sure everything worked properly across different devices. The communication was clear and the final website turned out really well. I’d definitely recommend working with Ali.",
-  "name": "Pedro Eloy",
-  "role": "Client"
- },
- {
-  "quote": "Ali is very reliable and easy to work with. He understands WordPress and front-end development really well and is always focused on getting the details right. He was able to take our requirements and turn them into a clean, professional website. Really happy with the work.",
-  "name": "Zeeshan",
-  "role": "Client / Collaborator"
- },
- {
-  "quote": "I’ve worked with Ali on several website projects and he has consistently delivered solid work. He’s good at understanding requirements, solving technical problems, and making sure the final result looks polished. Communication was straightforward and he was always willing to make improvements when needed.",
-  "name": "Fahad",
-  "role": "Client / Collaborator"
- },
- {
-  "quote": "Ali did an excellent job on the website. He was easy to communicate with, understood the requirements well, and handled the development side professionally. I especially appreciated his attention to responsive design and the overall user experience. Highly recommended.",
-  "name": "Muneeb",
-  "role": "Client / Collaborator"
- }
-];
+/* Keep testimonials empty until each client approves the exact words and attribution for publication. */
+window.TESTIMONIALS=[];
 window.card=(p,c="")=>{const h=p.case?`case-study.html?p=${p.slug}`:p.url,x=p.case?"":' target="_blank" rel="noopener"';
 return `<a class="pc ${c}" href="${h}"${x}><div class="art" style="--h:${p.h}"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>${p.abbr}</b><img src="${p.shot}" alt="${p.name} website" loading="lazy" onerror="this.remove()"></div><div class="pi"><div><h3>${p.name}</h3><p>${p.desc}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join("")}</div></div><span class="go">↗</span></div></a>`};
