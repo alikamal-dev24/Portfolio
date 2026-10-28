@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://portfolio.alikamal-dev24.workers.dev/</loc></url>
-<url><loc>https://portfolio.alikamal-dev24.workers.dev/projects.html</loc></url>
+<url><loc>https://portfolio.alikamal-dev24.workers.dev/</loc><lastmod>2026-10-26</lastmod><priority>1.0</priority></url>
+<url><loc>https://portfolio.alikamal-dev24.workers.dev/projects</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://portfolio.alikamal-dev24.workers.dev/work/ric-architects</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://portfolio.alikamal-dev24.workers.dev/work/vip-lease</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://portfolio.alikamal-dev24.workers.dev/work/maverick-overhead-doors</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://portfolio.alikamal-dev24.workers.dev/work/danan-foods-crm</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://portfolio.alikamal-dev24.workers.dev/work/in-the-event</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://portfolio.alikamal-dev24.workers.dev/work/harris-le-roy-architecture</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
 </urlset>
