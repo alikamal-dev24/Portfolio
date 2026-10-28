@@ -318,7 +318,7 @@
 
   // Orange page wipe when opening the projects page or a case study.
   document.addEventListener('click', e => {
-    const link = e.target.closest('a[href="projects.html"], a[href^="case-study.html"]');
+    const link = e.target.closest('a[href="projects.html"], a[href^="case-study.html"], a[href^="work/"]');
     if (!link || e.metaKey || e.ctrlKey) return;
     e.preventDefault();
     gsap.to('.wipe', { yPercent: -100, duration: 0.6, ease: 'power4.inOut', onComplete: () => (location.href = link.href) });
