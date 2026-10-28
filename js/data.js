@@ -586,5 +586,5 @@ window.PROJECTS=[
 ];
 /* Keep testimonials empty until each client approves the exact words and attribution for publication. */
 window.TESTIMONIALS=[];
-window.card=(p,c="")=>{const h=p.case?`case-study.html?p=${p.slug}`:p.url,x=p.case?"":' target="_blank" rel="noopener"';
+window.card=(p,c="")=>{const h=p.case?`work/${p.slug}.html`:p.url,x=p.case?"":' target="_blank" rel="noopener"';
 return `<a class="pc ${c}" href="${h}"${x}><div class="art" style="--h:${p.h}"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>${p.abbr}</b><img src="${p.shot}" alt="${p.name} website" loading="lazy" onerror="this.remove()"></div><div class="pi"><div><h3>${p.name}</h3><p>${p.desc}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join("")}</div></div><span class="go">↗</span></div></a>`};
