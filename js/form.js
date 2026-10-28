@@ -148,7 +148,12 @@
       .then(function (res) {
         return res.json().catch(function () { return {}; }).then(function (data) {
           var ok = res.ok && data.ok !== false && String(data.success) !== 'false';
-          if (!ok) { throw new Error((data && data.message) || ('HTTP ' + res.status)); }
+          if (!ok) {
+            var e = new Error((data && data.message) || ('HTTP ' + res.status));
+            e.serverMessage = (data && (data.message || data.error)) || '';
+            e.status = res.status;
+            throw e;
+          }
           return data;
         });
       })
@@ -157,8 +162,16 @@
         form.reset();
         say('Thank you! Your message was sent. I will reply within 24–48 hours.', 'ok');
       })
-      .catch(function () {
-        say('Your message could not be sent. Please email me directly at', 'err', true);
+      .catch(function (err) {
+        // Open the browser console (F12) to see the exact reason.
+        if (window.console && console.error) {
+          console.error('[contact form] send failed:', err, err && err.status ? ('status ' + err.status) : '');
+        }
+        var why = err && err.serverMessage ? String(err.serverMessage).slice(0, 220) : '';
+        say(why
+          ? 'The form service replied: "' + why + '". You can also email me directly at'
+          : 'Your message could not be sent. Please try again, or email me directly at',
+          'err', true);
       })
       .then(function () {
         if (timer) clearTimeout(timer);
