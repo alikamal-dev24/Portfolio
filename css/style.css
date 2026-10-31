@@ -1444,6 +1444,10 @@ body:before {
   border-radius: 24px;
 }
 
+.review-empty[hidden] {
+  display: none;
+}
+
 .review-empty p {
   max-width: 48ch;
   margin: 0;
