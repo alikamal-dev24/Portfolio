@@ -42,7 +42,7 @@
 <header id="hd"><div class="wrap nav">
   <a href="#home" class="logo">Ali<i>.</i>Kamal</a>
   <nav aria-label="Main"><ul id="nv">
-    <li><a href="#home" class=on>Home</a></li><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li>
+    <li><a href="#home" class=on>Home</a></li><li><a href="#work">Work</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#reviews">Testimonials</a></li><li><a href="#contact">Contact</a></li>
   </ul></nav>
   <a href="#contact" class="btn p hide-m mag">Let's Talk</a>
   <button class="menu" id="mb" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -112,11 +112,14 @@
   <p class="note rv">Need ongoing support? Maintenance and improvements can continue after launch.</p>
 </div></section>
 
-<section id="reviews" class="rvw" hidden><div class="wrap">
-  <div class="sh rv rhead"><small>Testimonials</small><h2>What Clients Say</h2><p class="sub">“Good work speaks for itself — but hearing it from the people I’ve worked with means even more.”</p></div>
-  <div class="slider" id="sl" role="region" aria-roledescription="carousel" aria-label="Client testimonials" tabindex="0"><div class="track" id="tk" aria-live="polite"></div></div>
-  <div class="ctl" id="ct"><button id="pv" aria-label="Previous testimonial">←</button><div class="dots" id="dt"></div><button id="nx" aria-label="Next testimonial">→</button></div>
-  <p class="rtrust">Trusted by clients and collaborators for thoughtful design, clean development, and reliable delivery.</p>
+<section id="reviews" class="rvw" aria-labelledby="reviews-title"><div class="wrap">
+  <div class="sh rv rhead"><small>Client feedback</small><h2 id="reviews-title">In their own words.</h2><p class="sub">I only publish testimonials with each client's permission and exact wording.</p></div>
+  <div class="review-empty" id="review-empty">
+    <p>Client feedback will appear here once it has been approved for sharing.</p>
+    <a class="btn p" href="#contact">Discuss a project →</a>
+  </div>
+  <div class="slider" id="sl" role="region" aria-roledescription="carousel" aria-label="Client testimonials" tabindex="0" hidden><div class="track" id="tk" aria-live="polite"></div></div>
+  <div class="ctl" id="ct" hidden><button id="pv" aria-label="Previous testimonial">←</button><div class="dots" id="dt"></div><button id="nx" aria-label="Next testimonial">→</button></div>
 </div></section>
 
 <section id="about"><div class="wrap ab2">
