@@ -584,7 +584,36 @@ window.PROJECTS=[
   "shot": "assets/work/fierce-arms.webp"
  }
 ];
-/* Keep testimonials empty until each client approves the exact words and attribution for publication. */
-window.TESTIMONIALS=[];
+/* Publish only client-approved quotes and attributions. Include a rating only when one was explicitly supplied and approved. */
+window.TESTIMONIALS=[
+  {
+    "name": "riccardomuna",
+    "quote": "Man, I was stuck trying to get my WooCommerce archive page settings right in Bricks for ages. He hopped in, saw what was wrong instantly, and sorted it out in no time. Absolute lifesaver if you're dealing with tricky WordPress stuff."
+  },
+  {
+    "name": "Abdulrehman",
+    "quote": "Just had him build out three blogging sites for us. Honestly, it was super smooth from start to finish—no headaches, clean layouts, and everything works great. Really solid work!"
+  },
+  {
+    "name": "Zohaib Majeed",
+    "quote": "He helped us build our Stranger Things fan hub (Strangerthingshub), and it came out looking so cool! Nailed the vibe we wanted, site runs fast, and everyone loves it. Highly recommend!"
+  },
+  {
+    "name": "Ali",
+    "quote": "He takes care of our websites across Bricks, Divi, Oxygen—you name it. Whenever something needs tweaking or updating, he just handles it. Super reliable guy to have in your corner."
+  },
+  {
+    "name": "Zubair Rae",
+    "quote": "Built our new site from scratch using Bricks and hooked up all our GHL launch automations too. He really knows his way around Bricks, Divi, Oxygen, and the whole tech setup. Everything worked like clockwork right from launch day."
+  },
+  {
+    "name": "Fahad",
+    "quote": "He’s built and maintained a bunch of websites for us across Bricks, Divi, and Oxygen. Super easy to talk to, catches things before they break, and always keeps the sites running fast."
+  },
+  {
+    "name": "Muneeb",
+    "quote": "We've worked together on agency projects and through WPTechStudio, where he’s built and kept up countless sites using Elementor, Bricks, Divi, and Oxygen. Super versatile, knows his builders inside and out, and a great teammate to work with."
+  }
+];
 window.card=(p,c="")=>{const h=p.case?`work/${p.slug}.html`:p.url,x=p.case?"":' target="_blank" rel="noopener"';
 return `<a class="pc ${c}" href="${h}"${x}><div class="art" style="--h:${p.h}"><div class="win"><i></i><i></i><i></i><u></u><u></u><u></u></div><b>${p.abbr}</b><img src="${p.shot}" alt="${p.name} website" loading="lazy" onerror="this.remove()"></div><div class="pi"><div><h3>${p.name}</h3><p>${p.desc}</p><div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join("")}</div></div><span class="go">↗</span></div></a>`};
