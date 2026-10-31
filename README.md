@@ -22,7 +22,7 @@ Add a `case:{...}` object to give it a case-study page. Only write facts that ar
 The home page shows the 4 hand-picked in `index.html` (search for `class="proj`).
 
 ## Testimonials
-Keep `window.TESTIMONIALS` empty until each client approves the exact quote and attribution. Never publish drafted or unverified reviews as client testimonials.
+The homepage shows a transparent empty state until there is client-approved feedback to publish. Add entries to `window.TESTIMONIALS` in `js/data.js` only after the client approves the exact quote and attribution. Include `rating` only when the client supplied or approved that rating; the carousel does not assume every testimonial is five stars. Never publish drafted or unverified reviews as client testimonials.
 
 ## Contact form
 `js/form.js` handles the form (it loads before `main.js` and takes over, so nothing is sent twice).
