@@ -193,11 +193,14 @@
     const track = $('#tk'), dots = $('#dt');
     let current = 0;
     reviewSection.hidden = false;
+    $('#review-empty').hidden = true;
+    $('#sl').hidden = false;
+    $('#ct').hidden = false;
 
     track.innerHTML = reviews.map((t, k) => `
       <div class="slide" role="group" aria-roledescription="slide" aria-label="${k + 1} of ${reviews.length}">
         <figure>
-          <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+          ${Number.isInteger(t.rating) && t.rating >= 1 && t.rating <= 5 ? `<div class="stars" role="img" aria-label="${t.rating} out of 5 stars">${'★'.repeat(t.rating)}</div>` : ''}
           <blockquote>“${esc(t.quote)}”</blockquote>
           <figcaption>
             ${t.photo ? `<img src="${esc(t.photo)}" alt="" loading="lazy" onerror="this.remove()">` : ''}
