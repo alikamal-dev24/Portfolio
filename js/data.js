@@ -599,7 +599,7 @@ window.TESTIMONIALS=[
     "quote": "He helped us build our Stranger Things fan hub (Strangerthingshub), and it came out looking so cool! Nailed the vibe we wanted, site runs fast, and everyone loves it. Highly recommend!"
   },
   {
-    "name": "Ali",
+    "name": "Hassan",
     "quote": "He takes care of our websites across Bricks, Divi, Oxygen—you name it. Whenever something needs tweaking or updating, he just handles it. Super reliable guy to have in your corner."
   },
   {
