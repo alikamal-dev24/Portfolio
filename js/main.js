@@ -262,7 +262,7 @@
       }
       return;
     }
-    location.href = 'mailto:ali.kamalofficial24@gmail.com?subject=' +
+    location.href = 'mailto:alikamal.dev24@gmail.com?subject=' +
       encodeURIComponent(`Project enquiry: ${d.type} from ${d.name}`) + '&body=' + encodeURIComponent(body);
     formMsg.textContent = 'Opening your email app...';
   });
